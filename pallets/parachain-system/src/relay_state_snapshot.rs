@@ -65,6 +65,10 @@ pub enum Error {
 	RootMismatch,
 	/// The slot cannot be extracted.
 	Slot(ReadEntryErr),
+	/// The upgrade go-ahead signal cannot be read.
+	UpgradeGoAhead(ReadEntryErr),
+	//  TODO:
+	UpgradeRestriction(ReadEntryErr),
 	/// The host configuration cannot be extracted.
 	Config(ReadEntryErr),
 	/// The DMQ MQC head cannot be extracted.
@@ -225,6 +229,41 @@ impl RelayChainStateProof {
 	///
 	/// Returns an error if anything failed at reading or decoding.
 	pub fn read_slot(&self) -> Result<relay_chain::v1::Slot, Error> {
-		read_entry(&self.trie_backend, relay_chain::well_known_keys::CURRENT_SLOT, None).map_err(Error::Slot)
+		read_entry(
+			&self.trie_backend,
+			relay_chain::well_known_keys::CURRENT_SLOT,
+			None,
+		)
+		.map_err(Error::Slot)
+	}
+
+	/// Read the go-ahead signal for the upgrade from the relay chain state proof.
+	///
+	/// The go-ahead specifies whether the parachain can apply the upgrade or should abort it. If
+	/// the value is abscent then there is either no judgment by the relay chain yet or no upgrade
+	/// is pending.
+	///
+	/// Returns an error if anything failed at reading or decoding.
+	pub fn read_upgrade_go_ahead_signal(
+		&self,
+	) -> Result<Option<relay_chain::v1::UpgradeGoAhead>, Error> {
+		read_entry(
+			&self.trie_backend,
+			&relay_chain::well_known_keys::upgrade_go_ahead_signal(self.para_id),
+			Some(None),
+		)
+		.map_err(Error::UpgradeGoAhead)
+	}
+
+	// TODO:
+	pub fn read_upgrade_restriction_signal(
+		&self,
+	) -> Result<Option<relay_chain::v1::UpgradeRestriction>, Error> {
+		read_entry(
+			&self.trie_backend,
+			&relay_chain::well_known_keys::upgrade_restriction_signal(self.para_id),
+			Some(None),
+		)
+		.map_err(Error::UpgradeGoAhead)
 	}
 }
