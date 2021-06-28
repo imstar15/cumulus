@@ -322,8 +322,8 @@ pub mod pallet {
 					Self::deposit_event(Event::ValidationFunctionApplied(vfp.relay_parent_number));
 				}
 				Some(relay_chain::v1::UpgradeGoAhead::Abort) => {
-					// TODO:
-					unimplemented!();
+					<PendingValidationCode<T>>::kill();
+					Self::deposit_event(Event::ValidationFunctionDiscarded);
 				}
 				None => {}
 			}
@@ -401,6 +401,8 @@ pub mod pallet {
 		ValidationFunctionStored,
 		/// The validation function was applied as of the contained relay chain block number.
 		ValidationFunctionApplied(RelayChainBlockNumber),
+		/// The relay-chain aborted the upgrade process.
+		ValidationFunctionDiscarded,
 		/// An upgrade has been authorized.
 		UpgradeAuthorized(T::Hash),
 		/// Some downward messages have been received and will be processed.
@@ -436,9 +438,24 @@ pub mod pallet {
 	/// The new validation function we will upgrade to when the relay chain
 	/// reaches [`PendingRelayChainBlockNumber`]. A real validation function must
 	/// exist here as long as [`PendingRelayChainBlockNumber`] is set.
+
+	/// In case of a scheduled upgrade, this storage field contains the validation code to be applied.
+	///
+	/// As soon as the parachain gives us the go-ahead signal, we will overwrite the [`:code`][well_known_keys::CODE]
+	/// which will result the next block process with the new validation code. This concludes the upgrade process.
+	///
+	/// [well_known_keys::CODE]: [sp_core::storage::well_known_keys::CODE]
 	#[pallet::storage]
 	#[pallet::getter(fn new_validation_function)]
 	pub(super) type PendingValidationCode<T: Config> = StorageValue<_, Vec<u8>, ValueQuery>;
+
+	/// Validation code that is set by the parachain and is to be communicated to collator and
+	/// consequently the relay-chain.
+	///
+	/// This will be cleared in `on_initialize` of each new block if no other pallet already set
+	/// the value.
+	#[pallet::storage]
+	pub(super) type NewValidationCode<T: Config> = StorageValue<_, Vec<u8>, OptionQuery>;
 
 	/// The [`PersistedValidationData`] set for this block.
 	#[pallet::storage]
@@ -449,8 +466,13 @@ pub mod pallet {
 	#[pallet::storage]
 	pub(super) type DidSetValidationCode<T: Config> = StorageValue<_, bool, ValueQuery>;
 
-	/// TODO:
-	/// Ephemeral
+	/// An option which indicates if the relay-chain restricts signalling a validation code upgrade.
+	/// In other words, if this is `Some` and [`NewValidationCode`] is `Some` then the produced
+	/// candidate will be invalid.
+	///
+	/// This storage item is a mirror of the corresponding value for the current parachain from the
+	/// relay-chain. This value is emphemeral which means it doesn't hit the storage. This value is
+	/// set after the inherent.
 	#[pallet::storage]
 	pub(super) type UpgradeRestrictionSignal<T: Config> =
 		StorageValue<_, Option<relay_chain::v1::UpgradeRestriction>, ValueQuery>;
@@ -496,14 +518,6 @@ pub mod pallet {
 	/// This will be cleared in `on_initialize` of each new block.
 	#[pallet::storage]
 	pub(super) type ProcessedDownwardMessages<T: Config> = StorageValue<_, u32, ValueQuery>;
-
-	/// Validation code that is set by the parachain and is to be communicated to collator and
-	/// consequently the relay-chain.
-	///
-	/// This will be cleared in `on_initialize` of each new block if no other pallet already set
-	/// the value.
-	#[pallet::storage]
-	pub(super) type NewValidationCode<T: Config> = StorageValue<_, Vec<u8>, OptionQuery>;
 
 	/// HRMP watermark that was set in a block.
 	///
@@ -860,6 +874,17 @@ impl<T: Config> Pallet<T> {
 
 	/// The implementation of the runtime upgrade functionality for parachains.
 	fn set_code_impl(validation_function: Vec<u8>) -> DispatchResult {
+		// Ensure that `ValidationData` exists. We do not care about the validation data per se,
+		// but we do care about the [`UpgradeRestrictionSignal`] which arrives with the same inherent.
+		ensure!(
+			<ValidationData<T>>::exists(),
+			Error::<T>::ValidationDataNotAvailable,
+		);
+		ensure!(
+			<UpgradeRestrictionSignal<T>>::get().is_none(),
+			Error::<T>::ProhibitedByPolkadot
+		);
+
 		ensure!(
 			!<PendingValidationCode<T>>::exists(),
 			Error::<T>::OverlappingUpgrades
@@ -868,10 +893,6 @@ impl<T: Config> Pallet<T> {
 		ensure!(
 			validation_function.len() <= cfg.max_code_size as usize,
 			Error::<T>::TooBig
-		);
-		ensure!(
-			<UpgradeRestrictionSignal<T>>::get().is_none(),
-			Error::<T>::ProhibitedByPolkadot
 		);
 
 		// When a code upgrade is scheduled, it has to be applied in two
