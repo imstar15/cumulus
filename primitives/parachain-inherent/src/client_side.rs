@@ -187,10 +187,6 @@ fn collect_relay_storage_proof(
 		})
 	}));
 
-	for key in &relevant_keys {
-		dbg!(key, relay_parent_state_backend.storage(key).unwrap());
-	}
-
 	sp_state_machine::prove_read(relay_parent_state_backend, relevant_keys)
 		.map_err(|e| {
 			tracing::error!(
