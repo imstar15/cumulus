@@ -12,10 +12,10 @@ rand = { version = "0.8.3", default-features = false }
 rand_chacha = { version = "0.3.0", default-features = false }
 
 # Substrate Dependencies
-sp-std = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "statemine_v2" }
-sp-runtime = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "statemine_v2" }
-frame-support = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "statemine_v2" }
-frame-system = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "statemine_v2" }
+sp-std = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
+frame-support = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
+frame-system = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
 
 # Polkadot Dependencies
 xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "statemine_v2" }
@@ -25,11 +25,11 @@ xcm-executor = { git = "https://github.com/imstar15/polkadot", default-features 
 cumulus-primitives-core = { path = "../../primitives/core", default-features = false }
 
 [dev-dependencies]
-sp-core = { git = 'https://github.com/imstar15/substrate', branch = "statemine_v2" }
-sp-io = { git = 'https://github.com/imstar15/substrate', branch = "statemine_v2" }
+sp-core = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
+sp-io = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 cumulus-pallet-parachain-system = { path = "../parachain-system" }
 xcm-builder = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
-pallet-balances = { git = 'https://github.com/imstar15/substrate', branch = "statemine_v2" }
+pallet-balances = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 
 [features]
 default = [ "std" ]

@@ -98,7 +98,7 @@ cargo build --release
 
 ```bash
 # Compile
-git clone https://github.com/imstar15/cumulus
+git clone https://github.com/paritytech/cumulus
 git fetch
 git checkout rococo-v1
 cargo build --release

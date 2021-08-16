@@ -13,16 +13,16 @@ targets = ['x86_64-unknown-linux-gnu']
 codec = { package = 'parity-scale-codec', version = '2.0.0', features = ['derive'], default-features = false }
 
 # Substrate dependencies
-sp-consensus-aura = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-sp-std = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-sp-io = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-frame-executive = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-frame-support = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-frame-system = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-pallet-balances = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-sp-runtime = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-sp-core = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-node-primitives = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
+sp-consensus-aura = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+sp-std = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+sp-io = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+frame-executive = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+frame-support = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+frame-system = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+pallet-balances = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+sp-runtime = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+sp-core = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+node-primitives = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
 
 # Polkadot dependencies
 polkadot-runtime-common = { git = 'https://github.com/imstar15/polkadot', default-features = false , branch = "statemine_v2" }
@@ -33,11 +33,11 @@ pallet-collator-selection = { path = '../../pallets/collator-selection', default
 
 [dev-dependencies]
 serde = { version = "1.0.119" }
-sp-io = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
-pallet-authorship = { git = 'https://github.com/imstar15/substrate', default-features = false , branch = "statemine_v2" }
+sp-io = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
+pallet-authorship = { git = 'https://github.com/paritytech/substrate', default-features = false , branch = "statemine_v2" }
 
 [build-dependencies]
-substrate-wasm-builder = { git = 'https://github.com/imstar15/substrate', branch = "statemine_v2" }
+substrate-wasm-builder = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 
 [features]
 default = ["std"]

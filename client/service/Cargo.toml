@@ -12,17 +12,17 @@ cumulus-client-pov-recovery = { path = "../pov-recovery" }
 cumulus-primitives-core = { path = "../../primitives/core" }
 
 # Substrate dependencies
-sc-chain-spec = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sc-client-api = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sc-service = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sc-telemetry = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sc-tracing = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sc-consensus-babe = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sp-api = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sp-core = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
-sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sc-chain-spec = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sc-service = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sc-telemetry = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sc-tracing = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sc-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot dependencies
 polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
