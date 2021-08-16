@@ -41,10 +41,10 @@ sp-trie = { git = "https://github.com/paritytech/substrate", branch = "statemine
 substrate-test-client = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # Cumulus
 cumulus-client-consensus-relay-chain = { path = "../../client/consensus/relay-chain" }
@@ -64,8 +64,8 @@ futures = "0.3.5"
 tokio = { version = "0.2.21", features = ["macros"] }
 
 # Polkadot dependencies
-polkadot-test-runtime = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-test-runtime = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # Substrate dependencies
 sc-cli = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }

@@ -15,10 +15,10 @@ sp-maybe-compressed-blob = { git = "https://github.com/paritytech/substrate", br
 sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot deps
-polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-node-primitives = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
-polkadot-node-subsystem = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-node-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-node-subsystem = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # Cumulus deps
 cumulus-primitives-core = { path = "../../primitives/core" }
@@ -37,7 +37,7 @@ tokio = { version = "0.2.21", features = ["macros"] }
 cumulus-test-service = { path = "../../test/service" }
 
 # Polkadot deps
-polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # substrate deps
 sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }

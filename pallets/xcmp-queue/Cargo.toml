@@ -28,7 +28,7 @@ cumulus-primitives-core = { path = "../../primitives/core", default-features = f
 sp-core = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 sp-io = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 cumulus-pallet-parachain-system = { path = "../parachain-system" }
-xcm-builder = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+xcm-builder = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 pallet-balances = { git = 'https://github.com/paritytech/substrate', branch = "statemine_v2" }
 
 [features]
