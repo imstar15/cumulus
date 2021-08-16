@@ -19,8 +19,8 @@ sp-trie = { git = "https://github.com/paritytech/substrate", branch = "statemine
 substrate-prometheus-endpoint = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot deps
-polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
-polkadot-runtime = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-runtime = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
 
 # Other deps
 futures = { version = "0.3.8", features = ["compat"] }
@@ -43,7 +43,7 @@ cumulus-test-service = { path = "../../../test/service" }
 cumulus-primitives-core = { path = "../../../primitives/core" }
 
 # Polkadot deps
-polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
 
 # Other deps
 tokio = { version = "0.2.21", features = ["macros"] }

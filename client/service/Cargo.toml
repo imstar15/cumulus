@@ -25,9 +25,9 @@ sp-core = { git = "https://github.com/paritytech/substrate", branch = "statemine
 sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot dependencies
-polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
-polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
-polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
+polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "wood_v1" }
 
 # Other deps
 tracing = "0.1.22"
