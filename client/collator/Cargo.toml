@@ -6,12 +6,12 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-io = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-api = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sc-client-api = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
 
 # Polkadot dependencies
 polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
@@ -39,11 +39,11 @@ cumulus-test-runtime = { path = "../../test/runtime" }
 cumulus-test-client = { path = "../../test/client" }
 
 # Substrate dependencies
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-sp-tracing = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
-substrate-test-client = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
+sp-keyring = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-state-machine = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+sp-tracing = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
+substrate-test-client = { git = "https://github.com/imstar15/substrate", branch = "statemine_v2" }
 
 # Other dependencies
 async-trait = "0.1.42"
