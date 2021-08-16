@@ -15,11 +15,11 @@ sp-core = { git = "https://github.com/paritytech/substrate", branch = "statemine
 sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }
 
 # Polkadot deps
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
-polkadot-statement-table = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
-polkadot-node-primitives = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
-polkadot-client = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
-polkadot-parachain = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-statement-table = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-node-primitives = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-client = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # other deps
 codec = { package = "parity-scale-codec", version = "2.0.0", features = [ "derive" ] }
@@ -37,7 +37,7 @@ cumulus-test-service = { path = "../../test/service" }
 cumulus-primitives-core = { path = "../../primitives/core" }
 
 # Polkadot deps
-polkadot-test-client = { git = "https://github.com/paritytech/polkadot", branch = "statemine_v2" }
+polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "statemine_v2" }
 
 # substrate deps
 sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "statemine_v2" }

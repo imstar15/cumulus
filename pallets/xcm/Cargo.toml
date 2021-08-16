@@ -14,7 +14,7 @@ sp-runtime = { git = "https://github.com/paritytech/substrate", default-features
 frame-support = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
 frame-system = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "statemine_v2" }
 
-xcm = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "statemine_v2" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "statemine_v2" }
 
 cumulus-primitives-core = { path = "../../primitives/core", default-features = false }
 
