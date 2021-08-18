@@ -6595,6 +6595,7 @@ dependencies = [
  "sc-tracing",
  "sc-transaction-pool",
  "serde",
+ "serde_json",
  "shell-runtime",
  "sp-api",
  "sp-block-builder",
