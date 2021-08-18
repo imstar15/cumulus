@@ -179,6 +179,7 @@ fn testnet_genesis(
 		},
 		aura_ext: Default::default(),
 		parachain_system: Default::default(),
+		tokens: Default::default(),
 	}
 }
 
