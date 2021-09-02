@@ -69,7 +69,7 @@ pub fn get_chain_spec(id: ParaId) -> ChainSpec {
 	properties.insert("tokenDecimals".into(), 15.into());
 
 	ChainSpec::from_genesis(
-		"Local Testnet",
+		"ORML Testnet",
 		"local_testnet",
 		ChainType::Local,
 		move || {

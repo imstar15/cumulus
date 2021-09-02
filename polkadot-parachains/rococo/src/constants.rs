@@ -42,7 +42,6 @@ pub mod time {
 pub mod fee {
 	use frame_support::weights::{
 		constants::{ExtrinsicBaseWeight, WEIGHT_PER_SECOND},
-		WeightToFeeCoefficient, WeightToFeeCoefficients, WeightToFeePolynomial,
 	};
 	use acala_primitives::{Balance, CurrencyId};
 	use acala_primitives::currency::TokenInfo;

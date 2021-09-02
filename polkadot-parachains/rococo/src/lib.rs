@@ -23,8 +23,6 @@
 include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
 use codec::{Encode, Decode};
-#[cfg(feature = "std")]
-use serde::{Deserialize, Serialize};
 
 use sp_api::impl_runtime_apis;
 use sp_core::OpaqueMetadata;
@@ -32,7 +30,7 @@ use sp_runtime::{
 	create_runtime_str, generic, impl_opaque_keys,
 	traits::{AccountIdLookup, BlakeTwo256, Block as BlockT, AccountIdConversion, Convert},
 	transaction_validity::{TransactionSource, TransactionValidity},
-	ApplyExtrinsicResult, RuntimeDebug,
+	ApplyExtrinsicResult,
 };
 use sp_std::prelude::*;
 #[cfg(feature = "std")]
@@ -61,17 +59,17 @@ pub use sp_runtime::{Perbill, Permill};
 use pallet_xcm::{EnsureXcm, IsMajorityOfBody, XcmPassthrough};
 use polkadot_parachain::primitives::Sibling;
 use xcm::v0::{
-	Junction::{self, AccountId32, GeneralKey, Parachain, Parent},
-	BodyId, Junction::*, MultiAsset, MultiLocation, MultiLocation::*, NetworkId, Xcm,
+	Junction::{AccountId32, GeneralKey, Parachain, Parent},
+	BodyId, Junction::*, MultiAsset, MultiLocation, MultiLocation::*, NetworkId,
 };
 use xcm_builder::{
-	AccountId32Aliases, AllowTopLevelPaidExecutionFrom, AllowUnpaidExecutionFrom, CurrencyAdapter,
-	EnsureXcmOrigin, FixedWeightBounds, IsConcrete, LocationInverter, NativeAsset,
+	AccountId32Aliases, AllowTopLevelPaidExecutionFrom, AllowUnpaidExecutionFrom,
+	EnsureXcmOrigin, FixedWeightBounds, LocationInverter,
 	ParentAsSuperuser, ParentIsDefault, RelayChainAsNative, SiblingParachainAsNative,
 	SiblingParachainConvertsVia, SignedAccountId32AsNative, SignedToAccountId32,
-	SovereignSignedViaLocation, TakeWeightCredit, UsingComponents, FixedRateOfConcreteFungible, TakeRevenue,
+	SovereignSignedViaLocation, TakeWeightCredit, FixedRateOfConcreteFungible, TakeRevenue,
 };
-use xcm_executor::{Config, XcmExecutor};
+use xcm_executor::{XcmExecutor};
 use orml_currencies::BasicCurrencyAdapter;
 use orml_traits::{parameter_type_with_key};
 pub use orml_xcm_support::{IsNativeConcrete, MultiCurrencyAdapter, MultiNativeAsset};
@@ -93,7 +91,7 @@ impl_opaque_keys! {
 /// This runtime version.
 #[sp_version::runtime_version]
 pub const VERSION: RuntimeVersion = RuntimeVersion {
-	spec_name: create_runtime_str!("test-parachain"),
+	spec_name: create_runtime_str!("orml-testnet"),
 	impl_name: create_runtime_str!("test-parachain"),
 	authoring_version: 1,
 	spec_version: 14,
@@ -503,26 +501,15 @@ impl Contains<AccountId> for DustRemovalWhitelist {
 }
 
 parameter_type_with_key! {
-	pub ExistentialDeposits: |currency_id: CurrencyId| -> Balance {
-		match currency_id {
-			&BTC => 1,
-			&DOT => 2,
-			_ => 0,
-		}
+	pub ExistentialDeposits: |_currency_id: CurrencyId| -> Balance {
+		0
 	};
 }
 
 // Pallet accounts of runtime
 parameter_types! {
 	pub const TreasuryPalletId: PalletId = PalletId(*b"oak/trsy");
-}
-
-parameter_types! {
 	pub TreasuryAccount: AccountId = TreasuryPalletId::get().into_account();
-}
-
-parameter_types! {
-	pub DustReceiver: AccountId = PalletId(*b"orml/dst").into_account();
 }
 
 impl orml_tokens::Config for Runtime {

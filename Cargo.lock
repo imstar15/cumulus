@@ -1081,7 +1081,7 @@ dependencies = [
 [[package]]
 name = "chainbridge"
 version = "0.0.2"
-source = "git+https://github.com/imstar15/chainbridge-substrate?branch=polkadot-v0.9.9#8812b62ce54e7e81b8f5aefcf7046e7563e1c320"
+source = "git+https://github.com/OAK-Foundation/chainbridge-substrate?branch=polkadot-v0.9.9#8812b62ce54e7e81b8f5aefcf7046e7563e1c320"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -5431,7 +5431,7 @@ dependencies = [
 [[package]]
 name = "orml-tokens"
 version = "0.4.1-dev"
-source = "git+https://github.com/open-web3-stack/open-runtime-module-library#7b79ffd8d0633d18bb84c4e07a7abd9c0e8c0084"
+source = "git+https://github.com/open-web3-stack/open-runtime-module-library#5babe0b71cf60538ca23d41231f9558816c52ae9"
 dependencies = [
  "frame-support",
  "frame-system",
