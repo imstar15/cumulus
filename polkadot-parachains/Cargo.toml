@@ -31,8 +31,8 @@ westmint-runtime = { path = "westmint" }
 statemint-common = { path = "statemint-common" }
 
 # Substrate dependencies
-frame-benchmarking = { git = 'https://github.com/paritytech/substrate', branch = "polkadot-v0.9.9" }
-frame-benchmarking-cli = { git = 'https://github.com/paritytech/substrate', branch = "polkadot-v0.9.9" }
+frame-benchmarking = { git = 'https://github.com/imstar15/substrate', branch = "polkadot-v0.9.9" }
+frame-benchmarking-cli = { git = 'https://github.com/imstar15/substrate', branch = "polkadot-v0.9.9" }
 sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.9" }
 sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.9" }
 sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.9" }
