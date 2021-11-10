@@ -16,9 +16,9 @@ cumulus-primitives-core = { path = "../core", default-features = false }
 
 [dev-dependencies]
 # Substrate dependencies
-sp-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-tracing = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
 
 # Cumulus dependencies
 cumulus-test-client = { path = "../../test/client" }

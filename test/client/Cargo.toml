@@ -5,25 +5,25 @@ authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2018"
 
 [dependencies]
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-block-builder = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-executor = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-executor-common = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-substrate-test-client = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-test-primitives = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-inherents = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-frame-system = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-pallet-transaction-payment = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-pallet-balances = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sc-service = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-consensus = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-block-builder = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-executor = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-executor-common = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+substrate-test-client = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-api = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-keyring = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-test-primitives = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-inherents = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-io = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-timestamp = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-state-machine = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+frame-system = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+pallet-transaction-payment = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+pallet-balances = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
 
 # Cumulus deps
 cumulus-test-runtime = { path = "../runtime" }

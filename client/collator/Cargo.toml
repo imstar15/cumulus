@@ -6,12 +6,12 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-io = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-api = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-client-api = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
 
 # Polkadot dependencies
 polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.10" }
@@ -39,11 +39,11 @@ cumulus-test-runtime = { path = "../../test/runtime" }
 cumulus-test-client = { path = "../../test/client" }
 
 # Substrate dependencies
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-substrate-test-client = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-keyring = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-state-machine = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-tracing = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+substrate-test-client = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
 
 # Other dependencies
 async-trait = "0.1.42"

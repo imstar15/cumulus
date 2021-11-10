@@ -7,22 +7,22 @@ edition = "2018"
 
 [dependencies]
 # Substrate dependencies
-sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-inherents = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-block-builder = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-consensus-aura = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sp-application-crypto = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-consensus-aura = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-consensus-slots = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-telemetry = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-sc-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
-substrate-prometheus-endpoint = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-inherents = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-block-builder = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-api = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-consensus-aura = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-keystore = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sp-application-crypto = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-client-api = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-consensus-aura = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-consensus-slots = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-telemetry = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+sc-consensus = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
+substrate-prometheus-endpoint = { git = "https://github.com/imstar15/substrate", branch = "debug-910" }
 
 # Polkadot dependencies
 polkadot-client = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.10" }
