@@ -71,7 +71,7 @@ cumulus-primitives-utility = { path = "../../../../primitives/utility", default-
 pallet-collator-selection = { path = "../../../../pallets/collator-selection", default-features = false }
 parachain-info = { path = "../../../pallets/parachain-info", default-features = false }
 parachains-common = { path = "../../../common", default-features = false }
-pallet-xcm-benchmarks = { git = "https://github.com/imstar15/polkadot", default-features = false, optional = true , branch = "release-v0.9.29" }
+pallet-xcm-benchmarks = { git = "https://github.com/imstar15/polkadot", default-features = false, optional = true , branch = "debug29" }
 
 
 [dev-dependencies]
