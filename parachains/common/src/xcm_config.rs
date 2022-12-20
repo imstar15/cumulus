@@ -103,8 +103,14 @@ where
 		let amount = WeightToFee::weight_to_fee(&weight);
 		// If the amount gotten is not at least the ED, then make it be the ED of the asset
 		// This is to avoid burning assets and decreasing the supply
+		log::error!(target: "xcm::filter_asset_location",
+			"charge_weight_in_fungibles, to_asset_balance S",
+			asset, origin, Location::get());
 		let asset_amount = BalanceConverter::to_asset_balance(amount, asset_id)
 			.map_err(|_| XcmError::TooExpensive)?;
+		log::error!(target: "xcm::filter_asset_location",
+			"charge_weight_in_fungibles, to_asset_balance {:?} E",
+			asset_amount);
 		Ok(asset_amount)
 	}
 }
