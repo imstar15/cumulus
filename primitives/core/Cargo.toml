@@ -14,9 +14,9 @@ sp-std = { git = "https://github.com/paritytech/substrate", default-features = f
 sp-trie = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.33" }
 
 # Polkadot
-polkadot-core-primitives = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-polkadot-parachain = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
+polkadot-core-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
 
 [features]
 default = [ "std" ]

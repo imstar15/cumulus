@@ -52,13 +52,13 @@ sp-transaction-pool = { git = "https://github.com/paritytech/substrate", default
 sp-version = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.33" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-pallet-xcm = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-polkadot-parachain = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-polkadot-runtime-common = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-xcm = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-xcm-builder = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
-xcm-executor = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.33" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+pallet-xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+polkadot-runtime-common = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+xcm-builder = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
+xcm-executor = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "debug-933" }
 
 # Cumulus
 cumulus-pallet-aura-ext = { path = "../../../../pallets/aura-ext", default-features = false }
