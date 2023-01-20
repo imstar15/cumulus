@@ -11,10 +11,10 @@ rand_chacha = { version = "0.3.0", default-features = false }
 scale-info = { version = "2.1.1", default-features = false, features = ["derive"] }
 
 # Substrate
-frame-support = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
-frame-system = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
-sp-std = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
+frame-support = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "polkadot-v0.9.29" }
+frame-system = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "polkadot-v0.9.29" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "polkadot-v0.9.29" }
+sp-std = { git = "https://github.com/imstar15/substrate", default-features = false, branch = "polkadot-v0.9.29" }
 
 # Polkadot
 xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "release-v0.9.29" }
@@ -24,14 +24,14 @@ xcm-executor = { git = "https://github.com/imstar15/polkadot", default-features 
 cumulus-primitives-core = { path = "../../primitives/core", default-features = false }
 
 # Optional import for benchmarking
-frame-benchmarking = { default-features = false, optional = true, git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
+frame-benchmarking = { default-features = false, optional = true, git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
 
 [dev-dependencies]
 
 # Substrate
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-pallet-balances = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-io = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+pallet-balances = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
 
 # Polkadot
 xcm-builder = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.29" }

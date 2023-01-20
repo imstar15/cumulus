@@ -11,19 +11,19 @@ futures-timer = "3.0.2"
 tracing = "0.1.36"
 
 # Substrate
-sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-network = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-telemetry = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sc-sysinfo = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-consensus = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
-sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
+sc-cli = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-client-api = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-consensus-babe = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-network = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-telemetry = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-tracing = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sc-sysinfo = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-api = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-blockchain = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-consensus = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-core = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-runtime = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
+sp-state-machine = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
 
 # Polkadot
 polkadot-cli = { git = "https://github.com/imstar15/polkadot", default-features = false, features = ["cli"] , branch = "release-v0.9.29" }
@@ -37,7 +37,7 @@ cumulus-relay-chain-interface = { path = "../relay-chain-interface" }
 [dev-dependencies]
 
 # Substrate
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.29" }
+sp-keyring = { git = "https://github.com/imstar15/substrate", branch = "polkadot-v0.9.29" }
 
 # Polkadot
 polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.29" }
