@@ -26,9 +26,9 @@ sp-runtime = { git = "https://github.com/PureStake/substrate", default-features 
 sp-std = { git = "https://github.com/PureStake/substrate", default-features = false , branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-xcm = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-xcm-executor = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+xcm-executor = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 pallet-collator-selection = { path = "../../pallets/collator-selection", default-features = false }

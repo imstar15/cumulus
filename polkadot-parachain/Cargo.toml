@@ -73,10 +73,10 @@ pallet-transaction-payment-rpc = { git = "https://github.com/PureStake/substrate
 substrate-state-trie-migration-rpc = { git = "https://github.com/PureStake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-polkadot-cli = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-service = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-xcm = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+xcm = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 cumulus-client-cli = { path = "../client/cli" }
@@ -99,7 +99,7 @@ tempfile = "3.3.0"
 tokio = { version = "1.24.1", features = ["macros", "time", "parking_lot"] }
 wait-timeout = "0.2"
 # purge_chain_works works with rococo-local and needs to allow this
-polkadot-cli = { git = "https://github.com/PureStake/polkadot", features = ["rococo-native"] , branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", features = ["rococo-native"] , branch = "moonbeam-polkadot-v0.9.37" }
 
 [features]
 default = []

@@ -22,7 +22,7 @@ sp-runtime = { git = "https://github.com/PureStake/substrate", branch = "moonbea
 sp-trie = { git = "https://github.com/PureStake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 cumulus-primitives-core = { path = "../../../primitives/core" }

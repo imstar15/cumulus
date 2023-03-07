@@ -51,14 +51,14 @@ pallet-contracts = { git = "https://github.com/PureStake/substrate", default-fea
 pallet-contracts-primitives = { git = "https://github.com/PureStake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-kusama-runtime-constants = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-pallet-xcm = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-core-primitives = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-parachain = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-runtime-common = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-xcm = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-xcm-builder = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
-xcm-executor = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+kusama-runtime-constants = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+pallet-xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-core-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-runtime-common = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+xcm-builder = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
+xcm-executor = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 cumulus-pallet-aura-ext = { path = "../../../../pallets/aura-ext", default-features = false }

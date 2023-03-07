@@ -50,10 +50,10 @@ substrate-test-client = { git = "https://github.com/PureStake/substrate", branch
 sc-cli = { git = "https://github.com/PureStake/substrate", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-service = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-test-service = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
-polkadot-cli = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 cumulus-client-cli = { path = "../../client/cli" }
@@ -76,7 +76,7 @@ futures = "0.3.25"
 portpicker = "0.1.1"
 
 # Polkadot dependencies
-polkadot-test-service = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.37" }
 
 # Substrate dependencies
 sc-cli = { git = "https://github.com/PureStake/substrate", branch = "moonbeam-polkadot-v0.9.37" }

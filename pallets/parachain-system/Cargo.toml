@@ -27,7 +27,7 @@ sp-trie = { git = "https://github.com/PureStake/substrate", default-features = f
 sp-version = { git = "https://github.com/PureStake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.37" }
 
 # Polkadot
-polkadot-parachain = { git = "https://github.com/PureStake/polkadot", default-features = false, features = [ "wasm-api" ], branch = "moonbeam-polkadot-v0.9.37" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", default-features = false, features = [ "wasm-api" ], branch = "moonbeam-polkadot-v0.9.37" }
 
 # Cumulus
 cumulus-pallet-parachain-system-proc-macro = { path = "proc-macro", default-features = false }
