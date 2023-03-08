@@ -44,18 +44,23 @@ use xcm_executor::traits::{MatchesFungibles, TransactAsset, WeightTrader};
 pub struct ParentAsUmp<T, W>(PhantomData<(T, W)>);
 impl<T: UpwardMessageSender, W: WrapVersion> SendXcm for ParentAsUmp<T, W> {
 	fn send_xcm(dest: impl Into<MultiLocation>, msg: Xcm<()>) -> Result<(), SendError> {
+		log::error!("ErrorSending, ParentAsUmp::send_xcm 111");
 		let dest = dest.into();
-
+		log::error!("ErrorSending, ParentAsUmp::send_xcm 222");
 		if dest.contains_parents_only(1) {
 			// An upward message for the relay chain.
+			log::error!("ErrorSending, ParentAsUmp::send_xcm 333");
 			let versioned_xcm =
 				W::wrap_version(&dest, msg).map_err(|()| SendError::DestinationUnsupported)?;
+			log::error!("ErrorSending, ParentAsUmp::send_xcm 444");
 			let data = versioned_xcm.encode();
+			log::error!("ErrorSending, ParentAsUmp::send_xcm 555");
 
 			T::send_upward_message(data).map_err(|e| SendError::Transport(e.into()))?;
-
+			log::error!("ErrorSending, ParentAsUmp::send_xcm 666");
 			Ok(())
 		} else {
+			log::error!("ErrorSending, ParentAsUmp::send_xcm 777");
 			// Anything else is unhandled. This includes a message this is meant for us.
 			Err(SendError::CannotReachDestination(dest, msg))
 		}
