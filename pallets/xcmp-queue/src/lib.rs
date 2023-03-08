@@ -1127,7 +1127,7 @@ impl<T: Config> XcmpMessageSource for Pallet<T> {
 /// Xcm sender for sending to a sibling parachain.
 impl<T: Config> SendXcm for Pallet<T> {
 	fn send_xcm(dest: impl Into<MultiLocation>, msg: Xcm<()>) -> Result<(), SendError> {
-		log::error!("ErrorSending, SendXcm::send_xcm, 111, dest: {:?}, msg: {:?}", dest, msg);
+		log::error!("ErrorSending, SendXcm::send_xcm, 111, msg: {:?}", dest, msg);
 		let dest = dest.into();
 		log::error!("ErrorSending, SendXcm::send_xcm, 222");
 
