@@ -44,7 +44,7 @@ use xcm_executor::traits::{MatchesFungibles, TransactAsset, WeightTrader};
 pub struct ParentAsUmp<T, W>(PhantomData<(T, W)>);
 impl<T: UpwardMessageSender, W: WrapVersion> SendXcm for ParentAsUmp<T, W> {
 	fn send_xcm(dest: impl Into<MultiLocation>, msg: Xcm<()>) -> Result<(), SendError> {
-		log::error!("ErrorSending, ParentAsUmp::send_xcm, 111, dest: {:?}, msg: {:?}", dest, msg);
+		log::error!("ErrorSending, ParentAsUmp::send_xcm, 111, msg: {:?}", msg);
 		let dest = dest.into();
 		log::error!("ErrorSending, ParentAsUmp::send_xcm, 222");
 
