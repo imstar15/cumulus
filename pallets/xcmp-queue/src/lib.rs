@@ -1129,6 +1129,7 @@ impl<T: Config> SendXcm for Pallet<T> {
 	fn send_xcm(dest: impl Into<MultiLocation>, msg: Xcm<()>) -> Result<(), SendError> {
 		log::error!("ErrorSending, SendXcm::send_xcm, 111, msg: {:?}", msg);
 		let dest = dest.into();
+		log::error!("ErrorSending, SendXcm::send_xcm, bbb, dest: {:?}", dest);
 		log::error!("ErrorSending, SendXcm::send_xcm, 222");
 
 		match &dest {
