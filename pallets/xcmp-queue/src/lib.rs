@@ -1127,25 +1127,35 @@ impl<T: Config> XcmpMessageSource for Pallet<T> {
 /// Xcm sender for sending to a sibling parachain.
 impl<T: Config> SendXcm for Pallet<T> {
 	fn send_xcm(dest: impl Into<MultiLocation>, msg: Xcm<()>) -> Result<(), SendError> {
+		log:error!("ErrorSending, SendXcm::send_xcm, 111, dest: {:?}, msg: {:?}", dest, msg);
 		let dest = dest.into();
+		log:error!("ErrorSending, SendXcm::send_xcm, 222");
 
 		match &dest {
 			// An HRMP message for a sibling parachain.
 			MultiLocation { parents: 1, interior: X1(Parachain(id)) } => {
+				log:error!("ErrorSending, SendXcm::send_xcm, 333");
 				let versioned_xcm = T::VersionWrapper::wrap_version(&dest, msg)
 					.map_err(|()| SendError::DestinationUnsupported)?;
+				log:error!("ErrorSending, SendXcm::send_xcm, 444");
 				let hash = T::Hashing::hash_of(&versioned_xcm);
+				log:error!("ErrorSending, SendXcm::send_xcm, 555");
 				Self::send_fragment(
 					(*id).into(),
 					XcmpMessageFormat::ConcatenatedVersionedXcm,
 					versioned_xcm,
 				)
 				.map_err(|e| SendError::Transport(<&'static str>::from(e)))?;
+				log:error!("ErrorSending, SendXcm::send_xcm, 666");
 				Self::deposit_event(Event::XcmpMessageSent { message_hash: Some(hash) });
+				log:error!("ErrorSending, SendXcm::send_xcm, 777");
 				Ok(())
 			},
 			// Anything else is unhandled. This includes a message this is meant for us.
-			_ => Err(SendError::CannotReachDestination(dest, msg)),
+			_ => {
+				log:error!("ErrorSending, SendXcm::send_xcm, 888");
+				Err(SendError::CannotReachDestination(dest, msg))
+			},
 		}
 	}
 }
