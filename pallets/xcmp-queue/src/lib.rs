@@ -812,6 +812,9 @@ impl<T: Config> Pallet<T> {
 		{
 			let index = shuffled[shuffle_index];
 			let sender = status[index].sender;
+			log::error!(
+				"T::ControllerOriginConverter::convert_origin"
+			);
 			let sender_origin = T::ControllerOriginConverter::convert_origin(
 				(1, Parachain(sender.into())),
 				OriginKind::Superuser,
