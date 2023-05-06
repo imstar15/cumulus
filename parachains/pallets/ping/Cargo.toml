@@ -13,7 +13,7 @@ sp-runtime = { git = "https://github.com/purestake/substrate", default-features 
 frame-support = { git = "https://github.com/purestake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.38" }
 frame-system = { git = "https://github.com/purestake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.38" }
 
-xcm = { git = "https://github.com/purestake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.38" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.38" }
 
 cumulus-primitives-core = { path = "../../../primitives/core", default-features = false }
 cumulus-pallet-xcm = { path = "../../../pallets/xcm", default-features = false }

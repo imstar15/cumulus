@@ -6,13 +6,13 @@ edition = "2021"
 
 [dependencies]
 # polkadot deps
-polkadot-primitives = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-core-primitives = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-overseer = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-service = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-node-subsystem-util = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-node-network-protocol = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-network-bridge = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-core-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-node-subsystem-util = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-node-network-protocol = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-network-bridge = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
 
 # substrate deps
 sc-authority-discovery = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.38" }

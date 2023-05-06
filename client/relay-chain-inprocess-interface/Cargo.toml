@@ -22,9 +22,9 @@ sp-runtime = { git = "https://github.com/purestake/substrate", branch = "moonbea
 sp-state-machine = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.38" }
 
 # Polkadot
-polkadot-cli = { git = "https://github.com/purestake/polkadot", default-features = false, features = ["cli"] , branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-client = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-service = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", default-features = false, features = ["cli"] , branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-client = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
 
 # Cumulus
 cumulus-primitives-core = { path = "../../primitives/core" }
@@ -36,8 +36,8 @@ cumulus-relay-chain-interface = { path = "../relay-chain-interface" }
 sp-keyring = { git = "https://github.com/purestake/substrate", branch = "moonbeam-polkadot-v0.9.38" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
-polkadot-test-client = { git = "https://github.com/purestake/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
+polkadot-test-client = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.38" }
 metered = { package = "prioritized-metered-channel", version = "0.2.0" }
 
 # Cumulus
