@@ -50,12 +50,12 @@ substrate-test-client = { git = "https://github.com/paritytech/substrate", branc
 sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
-polkadot-service = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
-polkadot-test-service = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
-polkadot-cli = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
-polkadot-node-subsystem = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
-polkadot-overseer = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
+polkadot-service = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
+polkadot-node-subsystem = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
+polkadot-overseer = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
 
 # Cumulus
 cumulus-client-cli = { path = "../../client/cli" }
@@ -79,7 +79,7 @@ futures = "0.3.26"
 portpicker = "0.1.1"
 
 # Polkadot dependencies
-polkadot-test-service = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.39" }
+polkadot-test-service = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.39" }
 
 # Substrate dependencies
 sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.39" }
