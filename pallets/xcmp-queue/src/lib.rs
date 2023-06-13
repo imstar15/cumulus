@@ -1174,6 +1174,7 @@ impl<T: Config> SendXcm for Pallet<T> {
 				// Anything else is unhandled. This includes a message that is not meant for us.
 				// We need to make sure that dest/msg is not consumed here.
 				*dest = Some(d);
+				log::error!("xcmp-queue::SendXcm::validate, NotApplicable");
 				Err(SendError::NotApplicable)
 			},
 		}
