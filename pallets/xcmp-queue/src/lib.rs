@@ -1159,7 +1159,7 @@ impl<T: Config> SendXcm for Pallet<T> {
 		msg: &mut Option<Xcm<()>>,
 	) -> SendResult<(ParaId, VersionedXcm<()>)> {
 		let d = dest.take().ok_or(SendError::MissingArgument)?;
-
+		log::error!("xcmp-queue::SendXcm::validate, d: {:?}, dest: {:?}", d, dest);
 		match &d {
 			// An HRMP message for a sibling parachain.
 			MultiLocation { parents: 1, interior: X1(Parachain(id)) } => {
