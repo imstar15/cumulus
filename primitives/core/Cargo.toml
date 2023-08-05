@@ -14,10 +14,10 @@ sp-std = { git = "https://github.com/PureStake/substrate", default-features = fa
 sp-trie = { git = "https://github.com/PureStake/substrate", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
 
 # Polkadot
-polkadot-core-primitives = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
-polkadot-parachain = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
-xcm = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
+polkadot-core-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
+polkadot-parachain = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
 
 [features]
 default = [ "std" ]

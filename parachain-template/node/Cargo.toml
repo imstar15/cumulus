@@ -52,9 +52,9 @@ substrate-prometheus-endpoint = { git = "https://github.com/PureStake/substrate"
 try-runtime-cli = { git = "https://github.com/PureStake/substrate", optional = true , branch = "moonbeam-polkadot-v0.9.40" }
 
 # Polkadot
-polkadot-cli = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.40" }
-polkadot-primitives = { git = "https://github.com/PureStake/polkadot", branch = "moonbeam-polkadot-v0.9.40" }
-xcm = { git = "https://github.com/PureStake/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
+polkadot-cli = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.40" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "moonbeam-polkadot-v0.9.40" }
+xcm = { git = "https://github.com/imstar15/polkadot", default-features = false, branch = "moonbeam-polkadot-v0.9.40" }
 
 # Cumulus
 cumulus-client-cli = { path = "../../client/cli" }
