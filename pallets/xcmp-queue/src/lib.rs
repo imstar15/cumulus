@@ -800,6 +800,7 @@ impl<T: Config> Pallet<T> {
 	/// for the second &c. though empirical and or practical factors may give rise to adjusting it
 	/// further.
 	fn service_xcmp_queue(max_weight: Weight) -> Weight {
+		log::error!("max_weight: ({:?}, {:?})", max_weight.ref_time(), max_weight.proof_size());
 		let suspended = QueueSuspended::<T>::get();
 		let mut messages_processed = 0;
 
@@ -868,6 +869,7 @@ impl<T: Config> Pallet<T> {
 			} else {
 				// Process up to one block's worth for now.
 				let weight_remaining = weight_available.saturating_sub(weight_used);
+				log::error!("weight_remaining: ({:?}, {:?})", weight_remaining.ref_time(), weight_remaining.proof_size());
 				let (weight_processed, is_empty) = Self::process_xcmp_message(
 					sender,
 					status[index].message_metadata[0],
