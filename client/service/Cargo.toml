@@ -27,7 +27,7 @@ sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkad
 sp-transaction-pool = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.43" }
 
 # Polkadot
-polkadot-primitives = { git = "https://github.com/paritytech/polkadot", branch = "release-v0.9.43" }
+polkadot-primitives = { git = "https://github.com/imstar15/polkadot", branch = "release-v0.9.43" }
 
 # Cumulus
 cumulus-client-cli = { path = "../cli" }
