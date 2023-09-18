@@ -513,10 +513,9 @@ impl<T: Config> Pallet<T> {
 		// Optimization note: `max_message_size` could potentially be stored in
 		// `OutboundXcmpMessages` once known; that way it's only accessed when a new page is needed.
 
-		log::error!("send_fragment recipient: {:?}, MessageSendError::NoChannel", recipient);
 		let max_message_size =
 			T::ChannelInfo::get_channel_max(recipient).ok_or(MessageSendError::NoChannel)?;
-		log::error!("send_fragment recipient: {:?}, MessageSendError::NoChannel, 22222", recipient);
+		log::error!("send_fragment data.len(): {:?}, max_message_size: {:?},", data.len(), max_message_size);
 		if data.len() > max_message_size {
 			return Err(MessageSendError::TooBig)
 		}
